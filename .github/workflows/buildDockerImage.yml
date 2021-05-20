@@ -1,4 +1,4 @@
-name: AzCLI-Bicep-Image-Build
+name: Bicep Docker Image Build
 
 on:
   push:
