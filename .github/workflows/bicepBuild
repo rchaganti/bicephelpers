@@ -1,0 +1,13 @@
+steps:
+# Runs the bicep CLI action - individual files
+- name: Run Bicep build
+  uses: aliencube/bicep-build-actions@v0.3
+  with:
+    files: main.bicep
+
+# Checks the result
+- name: Check the result
+  shell: bash
+  run: |
+    shopt -s globstar
+    ls -altR **/sample*.*
