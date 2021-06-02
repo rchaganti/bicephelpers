@@ -1,7 +1,11 @@
 name: ARM Template Build and Test
 
-on: push
-
+on: 
+  push:
+    branches:
+      - main
+  workflow_dispatch: 
+  
 jobs:
   build_and_test:
     name: Build ARM JSON Template
@@ -11,7 +15,7 @@ jobs:
     # Check out
     - name: Checkout the repo
       uses: actions/checkout@v2
-      
+
     # Runs the bicep CLI action - individual files
     - name: Run Bicep build
       uses: aliencube/bicep-build-actions@v0.3
