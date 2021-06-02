@@ -16,11 +16,13 @@ jobs:
     - name: Checkout the repo
       uses: actions/checkout@v2
 
-    # Runs the bicep CLI action - individual files
-    - name: Run Bicep build
-      uses: aliencube/bicep-build-actions@v0.3
-      with:
-        files: main.bicep
+    # Set up Bicep
+    - name: Setup Bicep
+      uses: anthony-c-martin/setup-bicep@v0.1
+
+    # Build ARM JSON template
+    - name: Build Bicep
+      run: bicep build ./main.bicep
 
     # Checks the result
     - name: The job has succeeded
