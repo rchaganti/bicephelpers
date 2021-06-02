@@ -8,7 +8,7 @@ resource sa 'Microsoft.Storage/storageAccounts@2019-04-01' = {
   }
   kind: 'StorageV2'
   properties: {
-  	accessTier: 'Cool'
+  	accessTier: 'Hot'
   }
 }
 
