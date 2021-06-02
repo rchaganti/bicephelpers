@@ -19,8 +19,5 @@ jobs:
         files: main.bicep
 
     # Checks the result
-    - name: Check the result
-      shell: bash
-      run: |
-        shopt -s globstar
-        ls -altR **/sample*.*
+    - name: The job has succeeded
+      if: ${{ success() }}
