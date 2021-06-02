@@ -1,14 +1,17 @@
-name: Bicep Build
+name: ARM Template Build and Test
 
-on:
-  push:
-    branches:
-      - 'main'
+on: push
 
 jobs:
-  docker:
+  build_and_test:
+    name: Build ARM JSON Template
     runs-on: ubuntu-latest
+
     steps:
+    # Check out
+    - name: Checkout the repo
+      uses: actions/checkout@v2
+      
     # Runs the bicep CLI action - individual files
     - name: Run Bicep build
       uses: aliencube/bicep-build-actions@v0.3
