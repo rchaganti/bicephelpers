@@ -24,4 +24,5 @@ jobs:
 
     # Checks the result
     - name: The job has succeeded
-      if: ${{ success() }}
+      if: ${{ failure() }}
+      run: exit 1
