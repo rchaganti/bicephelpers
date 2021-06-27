@@ -1,6 +1,7 @@
 name: Bicep Docker Image Build
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'main'
