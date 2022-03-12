@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/azure-cli:latest
+FROM mcr.microsoft.com/vscode/devcontainers/base:buster
 LABEL maintainer="ravikanth@ravichaganti.com"
 
 ARG USERNAME=vscode
